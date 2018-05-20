@@ -3,11 +3,12 @@ FROM base/archlinux
 MAINTAINER Aya Morisawa
 
 RUN rm /etc/pacman.d/mirrorlist
+RUN echo 'http://mirror.star4u.org/archlinux/$repo/os/$arch'										 >> /etc/pacman.d/mirrorlist
 RUN echo 'Server = http://ftp.jaist.ac.jp/pub/Linux/ArchLinux/$repo/os/$arch'    >> /etc/pacman.d/mirrorlist
 RUN echo 'Server = http://ftp.tsukuba.wide.ad.jp/Linux/archlinux/$repo/os/$arch' >> /etc/pacman.d/mirrorlist
 
 RUN rm /etc/localtime
-RUN ln -s /usr/share/zoneinfo/Asia/Tokyo /etc/localtime
+RUN ln -s /usr/share/zoneinfo/Asia/Seoul /etc/localtime
 
 RUN pacman -Sy --noconfirm
 RUN pacman -S --noconfirm pacman
