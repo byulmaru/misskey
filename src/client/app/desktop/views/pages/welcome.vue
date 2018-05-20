@@ -5,15 +5,15 @@
 			<div>
 				<div>
 					<h1>Share<br><span ref="share">Everything!</span><span class="cursor">_</span></h1>
-					<p>ようこそ！ <b>Misskey</b>はTwitter風ミニブログSNSです。思ったことや皆と共有したいことを投稿しましょう。タイムラインを見れば、皆の関心事をすぐにチェックすることもできます。<a :href="aboutUrl">詳しく...</a></p>
-					<p><button class="signup" @click="signup">はじめる</button><button class="signin" @click="signin">ログイン</button></p>
+					<p>환영해요! <b>Misskey</b>는 Twitter스러운 미니 블로그 SNS에요. 생각하고 있는 거나 모두와 공유하고 싶은 일을 올려 봐요. 타임라인을 보면, 모두의 관심사를 바로 확인할 수 있어요!<a :href="aboutUrl">자세히...</a></p>
+					<p><button class="signup" @click="signup">회원 가입</button><button class="signin" @click="signin">로그인</button></p>
 					<div class="users">
 						<mk-avatar class="avatar" v-for="user in users" :key="user.id" :user="user"/>
 					</div>
 				</div>
 				<div>
 					<div>
-						<header>%fa:comments R% タイムライン<div><span></span><span></span><span></span></div></header>
+						<header>%fa:comments R% 타임라인<div><span></span><span></span><span></span></div></header>
 						<mk-welcome-timeline/>
 					</div>
 				</div>
@@ -28,11 +28,11 @@
 		</div>
 	</footer>
 	<modal name="signup" width="500px" height="auto" scrollable>
-		<header :class="$style.signupFormHeader">新規登録</header>
+		<header :class="$style.signupFormHeader">회원 가입</header>
 		<mk-signup :class="$style.signupForm"/>
 	</modal>
 	<modal name="signin" width="500px" height="auto" scrollable>
-		<header :class="$style.signinFormHeader">ログイン</header>
+		<header :class="$style.signinFormHeader">로그인</header>
 		<mk-signin :class="$style.signinForm"/>
 	</modal>
 </div>
